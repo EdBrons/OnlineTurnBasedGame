@@ -1,0 +1,1 @@
+export default {water: 0, plains: 1, forest: 2, mountains: 3};

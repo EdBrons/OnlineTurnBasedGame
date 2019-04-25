@@ -1,0 +1,140 @@
+<html>
+  <head>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      canvas {
+        z-index: 0;
+      }
+      div {
+        z-index: 1;
+      }
+      .panel {
+        position: absolute;
+        z-index: 1;
+        background-color: azure;
+        opacity: .75;
+        border-style: solid;
+        border-width: 5px;
+      }
+      #mouseOver {
+        right: 5px;
+        bottom: 5px;
+        width: 250px;
+        height: 100px;
+        text-align: center;
+      }
+      #unitSelected {
+        right: 5px;
+        top: 5px;
+        width: 180px;
+        height: 250px;
+        text-align: center;
+      }
+      #unitStats * {
+        margin: 2px;
+        text-align: center;
+      }
+      #actions * button {
+        width: 50px;
+        height: 50px;
+      }
+      #inputMode {
+        left: 5px;
+        top: 5px;
+        width: 150px;
+        height: 50px;
+        text-align: center;
+      }
+      #tick {
+        left: 170px;
+        top: 5px;
+        width: 500px;
+        height: 50px;
+        text-align: center;
+      }
+      #faction {
+        left: 5px;
+        top: 70px;
+        width: 665px;
+        height: 50px;
+        text-align: center;
+      }
+      #city {
+        text-align: center;
+        width: 80%;
+        height: 60%;
+        top: 10%;
+        right: 10%;
+        z-index: 10;
+        opacity: 1;
+      }
+      .topbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        height: 10%;
+        background-color: dimgray;
+      }
+      .topbar div {
+        width: auto;
+        margin: 2px 2px;
+        background-color: beige;
+        font-size: 35px;
+      }
+      .half {
+        width: 50%;
+        height: 100%;
+      }
+      #cityScreens {
+        display: flex;
+        height: 90%;
+      }
+      #buildOptions div {
+        border-style: solid;
+        background-color: teal;
+      }
+      .list {
+        display: flex;
+        flex-direction: row;
+      }
+      .list * {
+        margin: 10px 10px
+      }
+      #units {
+        flex-wrap: wrap;
+        height: 90%;
+        flex-shrink: 1;
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+      #units div {
+        border-style: solid;
+        background-color: blueviolet;
+        height: 100px;
+        width: 100px;
+        margin: 3px;
+      }
+      #buildQueue div {
+        border-style: solid;
+        background-color: aqua;
+      }
+      #buildQueue {
+        overflow-x: scroll;
+      }
+      #buildQueue .local {
+        opacity: .2;
+      }
+      #buildQueue .toBeDeleted {
+        opacity: .2;
+        background: red;
+      }
+     </style>
+  </head>
+  <body>
+    <script src='/socket.io/socket.io.js'></script>
+    <script src='bundle.js'></script>
+  </body>
+</html>
