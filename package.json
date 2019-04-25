@@ -6,7 +6,7 @@
   "scripts": {
     "start:server": "nodemon --exec babel-node src/index.js",
     "start:client": "webpack --watch",
-    "start:heroku" : "babel-node src/index.js"
+    "start:heroku" : "./node_modules/.bin/babel-node src/index.js"
   },
   "author": "",
   "license": "ISC",
